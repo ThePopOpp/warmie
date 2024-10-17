@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybertruck Color Customizer</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cybertruck-container">
+      <!-- Truck SVG Image -->
+      <img id="truckBody" src="images/cybertruck-base.svg" alt="Cybertruck Base" class="vehicle-body">
+
+      <!-- PNG Overlay -->
+      <img src="images/cybertruck-overlay.png" alt="Cybertruck Overlay" class="vehicle-overlay">
+
+      <!-- Floating Action Button (FAB) -->
+      <button class="fab" id="actionButton">+</button>
+  </div>
+  
+  <!-- JavaScript file -->
+  <script src="project.js"></script>
+ 
+    <!-- Color Buttons (Scrollable Horizontal Selector) -->
+    <div class="color-selector">
+        <!-- High Gloss -->
+        <button class="color-button" data-color="#C51E25" style="background-color: #C51E25;">Hot Rod Red</button>
+        <button class="color-button" data-color="#E5531C" style="background-color: #E5531C;">Burnt Orange</button>
+        <button class="color-button" data-color="#FDD835" style="background-color: #FDD835;">Bright Yellow</button>
+        <button class="color-button" data-color="#3CB043" style="background-color: #3CB043;">Green Envy</button>
+        <button class="color-button" data-color="#3A6351" style="background-color: #3A6351;">Mystic Green</button>
+        <button class="color-button" data-color="#6DCFF6" style="background-color: #6DCFF6;">Sky Blue</button>
+        <button class="color-button" data-color="#007BB8" style="background-color: #007BB8;">Blue Raspberry</button>
+        <button class="color-button" data-color="#98FF98" style="background-color: #98FF98;">High Green Flip</button>
+        <button class="color-button" data-color="#970B17" style="background-color: #970B17;">Ruby Rosso</button>
+        <button class="color-button" data-color="#000000" style="background-color: #000000;">Black</button>
+        <button class="color-button" data-color="#3A3A3A" style="background-color: #3A3A3A;">Black Metallic</button>
+        <button class="color-button" data-color="#4F4F4F" style="background-color: #4F4F4F;">Meteor Grey</button>
+        <button class="color-button" data-color="#A5A5A5" style="background-color: #A5A5A5;">Nardo Grey</button>
+        <button class="color-button" data-color="#FFFFFF" style="background-color: #FFFFFF;">White</button>
+        <button class="color-button" data-color="#E1E1E1" style="background-color: #E1E1E1;">White Aluminum</button>
+        <button class="color-button" data-color="#2B2B2B" style="background-color: #2B2B2B;">Satin Black</button>
+
+        <!-- Gloss -->
+        <button class="color-button" data-color="#B0272F" style="background-color: #B0272F;">Red Metallic</button>
+        <button class="color-button" data-color="#CE2E2E" style="background-color: #CE2E2E;">Dragon Fire Red</button>
+        <button class="color-button" data-color="#D32F2F" style="background-color: #D32F2F;">Hot Rod Red</button>
+        <button class="color-button" data-color="#E64A19" style="background-color: #E64A19;">Fiery Orange</button>
+        <button class="color-button" data-color="#DA8B37" style="background-color: #DA8B37;">Liquid Copper</button>
+        <button class="color-button" data-color="#F57C00" style="background-color: #F57C00;">Bright Orange</button>
+        <button class="color-button" data-color="#FDD835" style="background-color: #FDD835;">Bright Yellow</button>
+        <button class="color-button" data-color="#FFD700" style="background-color: #FFD700;">Intense Yellow</button>
+        <button class="color-button" data-color="#43A047" style="background-color: #43A047;">Green Envy</button>
+        <button class="color-button" data-color="#007F00" style="background-color: #007F00;">Kelly Green</button>
+        <button class="color-button" data-color="#007D7A" style="background-color: #007D7A;">Atomic Teal</button>
+        <button class="color-button" data-color="#003366" style="background-color: #003366;">Midnight Blue</button>
+        <button class="color-button" data-color="#005B96" style="background-color: #005B96;">Boat Blue</button>
+        <button class="color-button" data-color="#00274D" style="background-color: #00274D;">Deep Blue</button>
+        <button class="color-button" data-color="#1E88E5" style="background-color: #1E88E5;">Blue Raspberry</button>
+        <button class="color-button" data-color="#37474F" style="background-color: #37474F;">Cosmic Blue</button>
+        <button class="color-button" data-color="#0A0A0A" style="background-color: #0A0A0A;">Black Gloss</button>
+        <button class="color-button" data-color="#4B4946" style="background-color: #4B4946;">Gold Dust Black</button>
+        <button class="color-button" data-color="#9E9E9E" style="background-color: #9E9E9E;">Satin Grey</button>
+        <button class="color-button" data-color="#616161" style="background-color: #616161;">Dark Grey</button>
+        <button class="color-button" data-color="#BDBDBD" style="background-color: #BDBDBD;">Silver</button>
+
+        <!-- Satin -->
+        <button class="color-button" data-color="#8BC34A" style="background-color: #8BC34A;">Apple Green</button>
+        <button class="color-button" data-color="#C62828" style="background-color: #C62828;">Smoldering Red</button>
+        <button class="color-button" data-color="#D32F2F" style="background-color: #D32F2F;">Ferrari Red Berry</button>
+        <button class="color-button" data-color="#1E88E5" style="background-color: #1E88E5;">Atomic Blue</button>
+        <button class="color-button" data-color="#E0E0E0" style="background-color: #E0E0E0;">Electric Silver</button>
+        <button class="color-button" data-color="#0277BD" style="background-color: #0277BD;">Ocean Blue</button>
+        <button class="color-button" data-color="#F9F9F9" style="background-color: #F9F9F9;">Pearl White</button>
+        <button class="color-button" data-color="#9E9E9E" style="background-color: #9E9E9E;">Satin Grey</button>
+        <button class="color-button" data-color="#455A64" style="background-color: #455A64;">Thundercloud</button>
+        <button class="color-button" data-color="#FCFCFC" style="background-color: #FCFCFC;">Pearl White SP</button>
+
+        <!-- Matte -->
+        <button class="color-button" data-color="#C62828" style="background-color: #C62828;">Red Matte</button>
+        <button class="color-button" data-color="#2E7D32" style="background-color: #2E7D32;">Pine Green Metallic</button>
+        <button class="color-button" data-color="#0288D1" style="background-color: #0288D1;">Blue Raspberry</button>
+        <button class="color-button" data-color="#212121" style="background-color: #212121;">Deep Black</button>
+        <button class="color-button" data-color="#5D4037" style="background-color: #5D4037;">Brown Metallic</button>
+        <button class="color-button" data-color="#B0BEC5" style="background-color: #B0BEC5;">Silver</button>
+        <button class="color-button" data-color="#37474F" style="background-color: #37474F;">Charcoal</button>
+
+        <!-- Textures -->
+        <button class="color-button" data-color="#000000" style="background-color: #000000;">Matrix Black</button>
+        <button class="color-button" data-color="#333333" style="Here’s the completion of the **HTML** that contains all the colors you requested, organized by finishes:
+
+```html
+        <!-- Textures -->
+        <button class="color-button" data-color="#000000" style="background-color: #000000;">Matrix Black</button>
+        <button class="color-button" data-color="#333333" style="background-color: #333333;">Textured Carbon Fiber</button>
+        <button class="color-button" data-color="#4B4946" style="background-color: #4B4946;">Gold Dust Black</button>
+        <button class="color-button" data-color="#6D6D6D" style="background-color: #6D6D6D;">Fission Matte</button>
+        <button class="color-button" data-color="#2B2B2B" style="background-color: #2B2B2B;">Carbon Fiber</button>
+
+        <!-- Color Flips -->
+        <button class="color-button" data-color="#800080" style="background-color: #800080;">Gloss Flip Berry Purple</button>
+        <button class="color-button" data-color="#8B4513" style="background-color: #8B4513;">Satin Flip Brown</button>
+        <button class="color-button" data-color="#B22222" style="background-color: #B22222;">Satin Flip Cherry Red</button>
+        <button class="color-button" data-color="#FF4500" style="background-color: #FF4500;">Gloss Flip Sunset Red</button>
+        <button class="color-button" data-color="#8B0000" style="background-color: #8B0000;">Satin Flip Black Rose</button>
+    </div>
+
+    <!-- Link to external JavaScript -->
+    <script src="project.js"></script>
+
+</body>
+</html>

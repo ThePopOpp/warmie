@@ -1,0 +1,171 @@
+/* General body styling */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* Container for the vehicle images */
+.cybertruck-container {
+  position: relative;
+  width: 60%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Styling for the truck body (SVG) */
+.vehicle-body {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Overlay styling */
+.vehicle-overlay {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Horizontal scrollable color selector */
+.color-selector {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0);
+  z-index: 100;
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar in WebKit-based browsers (Chrome, Safari) */
+.color-selector::-webkit-scrollbar {
+  display: none;
+}
+
+/* Color button styles */
+.color-button {
+  flex: 0 0 auto;
+  padding: 10px 20px; /* Dynamic width */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+  transition: transform 0.2s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.color-button:hover {
+  transform: scale(1.1);
+}
+
+/* Smooth color change on truck base */
+.vehicle-body {
+  transition: filter 0.3s ease;
+}
+/* Main container for the layout */
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Finish category column */
+.finish-category {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  background-color: #f4f4f4;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Scroll arrows */
+.scroll-arrow {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Container for finish buttons */
+.finish-buttons-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  width: 100%;
+  text-align: center;
+}
+
+/* Style for finish buttons */
+.finish-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #ccc;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.finish-button:hover {
+  background-color: #999;
+}
+
+/* Hide scrollbar in WebKit-based browsers (Chrome, Safari) */
+.finish-buttons-container::-webkit-scrollbar {
+  display: none;
+}
+/* General container styling for Cybertruck */
+.cybertruck-container {
+  position: relative;
+  width: 60%;
+  height: auto;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Floating Action Button (FAB) styling */
+.fab {
+  position: absolute;
+  Z-index: 200;
+  bottom: 100px; /* Distance from the bottom */
+  right: 100px;  /* Distance from the right */
+  width: 60px; /* Button size */
+  height: 60px; /* Button size */
+  background-color: hsl(265, 100%, 46%); /* Button color */
+  color: white; /* Icon color */
+  border: none;
+  border-radius: 50%; /* Rounded button */
+  font-size: 24px; /* Icon size */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fab:hover {
+  background-color: #FF5733; /* Change button color on hover */
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
